@@ -1,9 +1,14 @@
 pipeline {
-    agent any
+    agent any 
     stages {
-        stage('pull') {
+        stage('pull') { 
             steps {
-               sh 'https://github.com/sumitrekhadalal/studentapp-ui.git'
+               git 'https://github.com/shubhamkalsait/studentapp-ui.git' 
+            }
+        }
+        stage('build') { 
+            steps {
+               sh 'mvn clean package'
             }
         }
     }
