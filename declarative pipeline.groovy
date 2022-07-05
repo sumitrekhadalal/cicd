@@ -6,3 +6,5 @@ pipeline {
                sh 'https://github.com/Ashmirasheikh/studentapp-ui.git' 
             }
         }
+    }
+}
